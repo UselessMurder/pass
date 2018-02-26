@@ -1,0 +1,17 @@
+{{define "msg"}}
+{{if eq .Active true}}
+	<div class="row">
+		<div class="col-12">
+			{{if eq .Type 0}}
+				<div class="alert alert-danger text-center" role="alert">{{.Value}}</div>	
+			{{end}}
+			{{if eq .Type 1}}
+				<div class="alert alert-success text-center" role="alert">{{.Value}}</div>	
+			{{end}}
+			{{if eq .Type 2}}
+				<div class="alert alert-warning text-center" role="alert">{{.Value}}</div>	
+			{{end}}
+		</div>
+	</div>
+{{end}}
+{{end}}

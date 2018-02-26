@@ -1,0 +1,10 @@
+{{define "input"}}
+<div class="row">
+	<div class="col-12">
+		<div class="form-group">
+			<label for={{.Id}}>{{.Label}}</label>
+			<input type={{.Type}} class="form-control" id={{.Id}} name={{.Name}} placeholder={{.PlaceHolder}} value={{.Value}}>
+		</div>
+	</div>
+</div>
+{{end}}

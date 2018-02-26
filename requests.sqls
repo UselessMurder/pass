@@ -1,0 +1,9 @@
+GetAccountByName:select account.id, account.name, account.password, account.password_update_time from account where account.name = $1
+GetUsedPasswordByValue:select used_password.id, used_password.password from used_password where used_password.password = $1
+RegisterUser:insert into "account" ("name", "password", "password_update_time") values ($1, $2, $3)
+GetConfig:select config.id, config.min_password_age, config.max_password_age, config.max_length_used_list from config where config.id = 1
+GetUsedPasswords:select used_password.id, used_password.password from used_password
+AddPassword:insert into "used_password" ("password") values ($1)
+DeletePasswords:delete from used_password where used_password.id <= $1
+ChangePassword:update account set password = $1, password_update_time = $2 where id = $3
+ChangeConfig:update config set min_password_age = $1, max_password_age = $2, max_length_used_list = $3 where id = 1 

@@ -1,0 +1,24 @@
+{{define "common"}}
+{{template "head"}}
+<body>
+	{{template "navbar" .Nav}}
+	<main role="main" class="container page-content">
+		{{template "msg" .Message}}
+		<div class="row">
+			<div class="col-12">
+				<form id="registration-form" role="form" method="POST" action="">
+					{{range $key, $value := .Form.Inputs}}
+					{{template "input" $value}}
+					{{end}}
+					<div class="row">
+						<div class="col-12">
+							<button type="submit" class="btn btn-dark btn-block">{{.Form.Send.Value}}</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+</body>
+{{template "footer"}}
+{{end}}

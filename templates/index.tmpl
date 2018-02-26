@@ -1,0 +1,33 @@
+{{define "index"}}
+{{template "head"}}
+<body>
+	{{template "navbar" .Nav}}
+	<main role="main" class="container page-content">
+		<div class="row align-items-center">
+			<div class="col-12">
+				<h3 class="text-center">Добро пожаловать в менеджер паролей!</h3>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-12">
+				<div class="list-group">
+				  <a href="/registration" class="text-center list-group-item list-group-item-action">
+				    Нажмите сюда чтобы создать учетную запись
+				  </a>
+				  <a href="/login" class="text-center list-group-item list-group-item-action">
+				    Нажмите сюда чтобы войти в существующую учетную запись
+				  </a>
+				  <a href="/change_password" class="text-center list-group-item list-group-item-action">
+				  	Нажмите сюда чтобы изменить пароль существующей учетной записи
+				  </a>
+				  <a href="/config" class="text-center list-group-item list-group-item-action">
+				  	Нажмите сюда чтобы редактировать политику паролей учетных записей
+				  </a>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+{{template "footer"}}
+{{end}}
